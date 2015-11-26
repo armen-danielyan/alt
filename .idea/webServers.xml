@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e5057c49-3960-4018-a8d2-f43ff9714be7" name="alttv" url="http://alttv.am">
+        <fileTransfer host="alttv.am" port="21" rootFolder="/httpdocs" password="df92df9fdf89dffedfdcdfeadf99df9d" username="alttv">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

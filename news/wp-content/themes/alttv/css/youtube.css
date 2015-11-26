@@ -1,0 +1,48 @@
+#yt-channel {
+	float: left;
+	margin: 10px;
+	width: 940px;
+}
+#yt-subscribe {
+	float: right;
+	padding: 6px 0;
+	height: 24px;
+}
+#yt-videos {
+	background: url(../images/lent.png) repeat-x 0 0;
+	overflow: hidden;
+	padding: 17px 10px 9px 10px;
+	border-bottom: 1px solid #dee4ea;
+}
+.yt-cover {
+	background: url(../images/youtube_cover.png) no-repeat 0 0;
+	border-radius: 10px;
+	z-index: 100;
+	position: absolute;
+	width: 176px;
+	height: 99px;
+	top: 0;
+	left: 0;
+}
+.yt-cover span {
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#yt-videos li {
+	text-align: center;
+	position: relative;
+	width: 176px;
+	float: left;
+	margin-left: 10px;
+}
+#yt-videos a {
+	font-size: 11px;
+	line-height: 13px;
+}
+#yt-videos img {
+	border-radius: 10px;
+	margin-bottom: 17px;
+}
