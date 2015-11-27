@@ -2,16 +2,19 @@
 <?php include('sidebar_left.php'); ?>
 <div id="content">
 	<div id="archive">
-		<?php wp_reset_query();
-		if (have_posts()) :	
+		<?php if (have_posts()) :
 			if (is_category()) {
-				if (is_category("529")){ ?>
+				$currentCat = get_query_var('cat');
+				$arg = array(
+					"child_of" => 529,
+					"hide_empty" => 0
+				);
+				$cats = get_categories($arg);
+				$parrentCats = get_category_parents( $currentCat, false, ',' );
+				$parrentCatsArray = explode(',', $parrentCats);
+
+				if (is_category(529) || count($parrentCatsArray) > 2){ ?>
 					<div id="community">
-						<?php $arg = array(
-							"child_of" => 529,
-							"hide_empty" => 0
-						);
-						$cats = get_categories($arg); ?>
 						<ul>
 							<?php foreach($cats as $cat){ ?>
 								<?php $catLink = get_category_link($cat->term_id); ?>
