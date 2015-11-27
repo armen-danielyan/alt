@@ -1,0 +1,170 @@
+a:63:{s:18:"__sape_delimiter__";s:8:"<br><br>";s:12:"__for_user__";s:32:"364ab648cdc156452e2375acd0e4a98d";s:12:"__for_host__";s:15:"http://alttv.am";s:31:"__sape_page_obligatory_output__";s:4810:"<!-- SAPE RTB JS -->
+<script
+    async="async"
+    src="//cdn-rtb.sape.ru/teasers/js/960/2/14960.js"
+    type="text/javascript">
+</script>
+<!-- SAPE RTB END --><script type="text/javascript">
+window.addEventListener('load',function(event){var ab_detector={};if(!Date.now){Date.now=function(){return new Date().getTime();}}
+ab_detector.getTimestampMs=function(){return''+(new Date().getTime());};ab_detector.generateUUID=function(){return'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0,v=c=='x'?r:(r&0x3|0x8);return v.toString(16);}).toLowerCase();};ab_detector.encodeUriParam=function(value){if(null==value){return'';}
+value=''+value;return(encodeURIComponent instanceof Function)?encodeURIComponent(value):escape(value);};ab_detector.implodeUriParams=function(params){var key,uriParams=[];for(key in params){if(params.hasOwnProperty(key)){uriParams.push(key+'='+params[key]);}}
+return uriParams.join('&');};ab_detector.makeRequestUri=function(baseUrl,uriParams){var uri=ab_detector.implodeUriParams(uriParams);if(uri.length>8000){uri=uri.substr(0,8000);}
+return baseUrl+'?'+uri;};ab_detector.makeRequestImage=function(url){(window.Image?(new Image()):document.createElement('img')).src=url;};ab_detector.makeRequestIframe=function(url){var ifr=document.createElement('iframe');if(ifr){ifr.setAttribute('src',url);ifr.setAttribute('style','width:1px;height:1px;display:none;');document.body.appendChild(ifr);}};ab_detector.cookies={getItem:function(sKey){return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(sKey).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null;},setItem:function(sKey,sValue,vEnd,sPath,sDomain,bSecure){if(!sKey||/^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)){return false;}
+var sExpires="";if(vEnd){switch(vEnd.constructor){case Number:sExpires=vEnd===Infinity?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+vEnd;break;case String:sExpires="; expires="+vEnd;break;case Date:sExpires="; expires="+vEnd.toUTCString();break;}}
+document.cookie=encodeURIComponent(sKey)+"="+encodeURIComponent(sValue)+sExpires+(sDomain?"; domain="+sDomain:"")+(sPath?"; path="+sPath:"")+(bSecure?"; secure":"");return true;},removeItem:function(sKey,sPath,sDomain){if(!sKey||!this.hasItem(sKey)){return false;}
+document.cookie=encodeURIComponent(sKey)+"=; expires=Thu, 01 Jan 1970 00:00:00 GMT"+(sDomain?"; domain="+sDomain:"")+(sPath?"; path="+sPath:"");return true;},hasItem:function(sKey){return(new RegExp("(?:^|;\\s*)"+encodeURIComponent(sKey).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=")).test(document.cookie);},keys:function(){var aKeys=document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/);for(var nIdx=0;nIdx<aKeys.length;nIdx++){aKeys[nIdx]=decodeURIComponent(aKeys[nIdx]);}
+return aKeys;}};ab_detector.isHidden=function(elem){if(elem.offsetWidth==0&&elem.offsetHeight==0){return true;}
+if(typeof window.getComputedStyle=='function'){var style=window.getComputedStyle(elem);return style.display==='none';}
+return false;};ab_detector.getCookie=function(){var cookie;if(this.cookies.hasItem('ab_detector')){cookie=this.cookies.getItem('ab_detector');}
+else{cookie=this.generateUUID();this.cookies.setItem('ab_detector',cookie);}
+return cookie;};ab_detector.onCheck=function(blocked){var props={'v':5,'b':+blocked,'h':window.location.host,'u':this.getCookie(),'c':this.tryCounter,'ts':this.getTimestampMs()};var uri=this.makeRequestUri('http://namuyutno.ru/detector/',props);this.makeRequestImage(uri);if(document.getElementById('ab_detector')){var id=blocked?'ab_detector_yes':'ab_detector_no';document.getElementById(id).style.display='block';console.log('ab'+(blocked?' ':' NOT ')+'detected');console.log('url: '+uri);}};ab_detector.createTestElement=function(){var elem=document.createElement('iframe');elem.id='ab_detector_block';elem.className='text-ad advblock textAds ad-click adBanner';elem.setAttribute('style','width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; bottom: -1000px !important;');elem.setAttribute('src','http://ad.adriver.ru/cgi-bin/erle.cgi');document.body.appendChild(elem);};ab_detector.checkByDiv=function(){var self=this;var elem=document.getElementById('ab_detector_block');if(!elem){self.createTestElement();setTimeout(function(){self.checkByDiv();},1);return;}
+var nofTries=50,tryTimeout=200;if(this.tryCounter===undefined){this.tryCounter=0;}
+var blocked=this.isHidden(elem);if(!blocked&&this.tryCounter<nofTries){this.tryCounter+=1;setTimeout(function(){self.checkByDiv();},tryTimeout);return;}
+self.onCheck(blocked);setTimeout(function(){elem.parentNode.removeChild(elem);},5000);};ab_detector.checkByDiv();},false);</script>";s:182:"/%d5%a5%d5%bc%d5%a1%d5%bf%d5%b8%d5%b6-%d5%a1%d5%b5%d5%a3%d5%a5%d5%b7%d5%a1%d5%bf%d5%ab-%d5%a4%d5%ba%d6%80%d5%b8%d6%81%d5%b8%d6%82%d5%b4/%d5%a1%d5%b5%d5%a3%d5%a5%d5%b7%d5%a1%d5%bf-07/";a:1:{i:0;s:76:" <a href="http://www.rospres.com/m/" target="_blank">анастасия мишарина</a> ";}s:181:"/%d5%a5%d5%bc%d5%a1%d5%bf%d5%b8%d5%b6-%d5%a1%d5%b5%d5%a3%d5%a5%d5%b7%d5%a1%d5%bf%d5%ab-%d5%a4%d5%ba%d6%80%d5%b8%d6%81%d5%b8%d6%82%d5%b4/%d5%a1%d5%b5%d5%a3%d5%a5%d5%b7%d5%a1%d5%bf-07";a:1:{i:0;s:76:" <a href="http://www.rospres.com/m/" target="_blank">анастасия мишарина</a> ";}s:1:"/";a:1:{i:0;s:112:" <a href="http://www.kinguin.net/category/17136/fallout-4-steam-cd-key/" target="_blank">Fallout 4 game key</a> ";}s:91:"/category/%d5%bf%d5%b6%d5%bf%d5%a5%d5%bd%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6/page/20/";a:1:{i:0;s:77:" <a href="http://brandfriends.ru/" target="_blank">одежда оптом из китая</a> ";}s:90:"/category/%d5%bf%d5%b6%d5%bf%d5%a5%d5%bd%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6/page/20";a:1:{i:0;s:77:" <a href="http://brandfriends.ru/" target="_blank">одежда оптом из китая</a> ";}s:30:"/caprice-that-affects-drivers/";a:1:{i:0;s:112:" Песчано-гравийные смеси <a href="http://algnm.ru/" target="_blank">http://algnm.ru/</a> сайт компании АЛГОРИТМ ";}s:29:"/caprice-that-affects-drivers";a:1:{i:0;s:112:" Песчано-гравийные смеси <a href="http://algnm.ru/" target="_blank">http://algnm.ru/</a> сайт компании АЛГОРИТМ ";}s:191:"/%d5%a8%d5%b6%d5%bf%d6%80%d5%b8%d5%b2%d5%b6%d5%a5%d6%80%d5%ab-%d5%a1%d5%af%d5%bf%d5%ab%d5%be%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6-%d5%a7-%d5%b6%d5%af%d5%a1%d5%bf%d5%be%d5%b8%d6%82%d5%b4/";a:1:{i:0;s:106:" <a href="https://www.youtube.com/watch?v=7IkPVyo-oDY" target="_blank">Мики маус и друзья Лего Дупло</a>. ";}s:190:"/%d5%a8%d5%b6%d5%bf%d6%80%d5%b8%d5%b2%d5%b6%d5%a5%d6%80%d5%ab-%d5%a1%d5%af%d5%bf%d5%ab%d5%be%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6-%d5%a7-%d5%b6%d5%af%d5%a1%d5%bf%d5%be%d5%b8%d6%82%d5%b4";a:1:{i:0;s:106:" <a href="https://www.youtube.com/watch?v=7IkPVyo-oDY" target="_blank">Мики маус и друзья Лего Дупло</a>. ";}s:198:"/%D5%A1%D6%80%D5%B4%D5%A1%D5%BE%D5%AB%D6%80%D5%AB-%D5%B4%D5%A1%D6%80%D5%A6%D5%B8%D6%82%D5%B4-%D5%A1%D5%B5%D5%BD-%D5%BF%D5%A1%D6%80%D5%AB-%D5%A1%D5%B7%D5%A1%D5%AF%D5%A5%D6%80%D5%BF%D5%B6%D5%A5%D6%80/";a:1:{i:0;s:164:" <a href="http://nypost.com/2014/11/17/real-estate-honcho-stiffs-contractors-over-measly-amounts/" target="_blank">Licking pussies. Search results for licking</a>. ";}s:197:"/%D5%A1%D6%80%D5%B4%D5%A1%D5%BE%D5%AB%D6%80%D5%AB-%D5%B4%D5%A1%D6%80%D5%A6%D5%B8%D6%82%D5%B4-%D5%A1%D5%B5%D5%BD-%D5%BF%D5%A1%D6%80%D5%AB-%D5%A1%D5%B7%D5%A1%D5%AF%D5%A5%D6%80%D5%BF%D5%B6%D5%A5%D6%80";a:1:{i:0;s:164:" <a href="http://nypost.com/2014/11/17/real-estate-honcho-stiffs-contractors-over-measly-amounts/" target="_blank">Licking pussies. Search results for licking</a>. ";}s:27:"/grain-appears-in-red-book/";a:1:{i:0;s:141:" <a href="http://avtopoint66.ru/avtolombard" target="_blank">залог авто</a> очень прост. Через Автопоинт. Они возьмут любой ваш авто в залог ";}s:26:"/grain-appears-in-red-book";a:1:{i:0;s:141:" <a href="http://avtopoint66.ru/avtolombard" target="_blank">залог авто</a> очень прост. Через Автопоинт. Они возьмут любой ваш авто в залог ";}s:188:"/4-%d5%bf%d5%a1%d6%80%d5%a5%d5%af%d5%a1%d5%b6-%d5%a1%d5%b7%d5%b8%d5%bf%d5%b6-%d6%85%d5%a3%d5%b6%d5%b8%d6%82%d5%a9%d5%b5%d5%a1%d5%b6-%d5%af%d5%a1%d6%80%d5%ab%d6%84-%d5%b8%d6%82%d5%b6%d5%ab/";a:1:{i:0;s:127:" <a href="http://timeavto66.ru/prodat-avto" target="_blank">продать машину</a> хотите? Срочно? Продать машину можно в Таймавто ";}s:187:"/4-%d5%bf%d5%a1%d6%80%d5%a5%d5%af%d5%a1%d5%b6-%d5%a1%d5%b7%d5%b8%d5%bf%d5%b6-%d6%85%d5%a3%d5%b6%d5%b8%d6%82%d5%a9%d5%b5%d5%a1%d5%b6-%d5%af%d5%a1%d6%80%d5%ab%d6%84-%d5%b8%d6%82%d5%b6%d5%ab";a:1:{i:0;s:127:" <a href="http://timeavto66.ru/prodat-avto" target="_blank">продать машину</a> хотите? Срочно? Продать машину можно в Таймавто ";}s:63:"/sidewalk-ramps-related-issue-remains-unsolved/yntratexamas3-2/";a:1:{i:0;s:99:" <a href="http://www.stop-mlm.com/2015/06/nutri-strike-stop-mlm.html" target="_blank">стоп МЛМ</a> ";}s:62:"/sidewalk-ramps-related-issue-remains-unsolved/yntratexamas3-2";a:1:{i:0;s:99:" <a href="http://www.stop-mlm.com/2015/06/nutri-strike-stop-mlm.html" target="_blank">стоп МЛМ</a> ";}s:78:"/category/%D5%B0%D5%A1%D5%B4%D5%A1%D5%B5%D5%B6%D6%84%D5%B6%D5%A5%D6%80/page/3/";a:1:{i:0;s:80:" <a href="http://talk.caricyno.net/" target="_blank">Квартиры в Новостройке</a> ";}s:77:"/category/%D5%B0%D5%A1%D5%B4%D5%A1%D5%B5%D5%B6%D6%84%D5%B6%D5%A5%D6%80/page/3";a:1:{i:0;s:80:" <a href="http://talk.caricyno.net/" target="_blank">Квартиры в Новостройке</a> ";}s:9:"/contact/";a:1:{i:0;s:93:" <a href="http://www.automaten-rocker.com/novoline.html" target="_blank">Novoline Spiele</a> ";}s:8:"/contact";a:1:{i:0;s:93:" <a href="http://www.automaten-rocker.com/novoline.html" target="_blank">Novoline Spiele</a> ";}s:200:"/5-%d5%a3%d5%b5%d5%b8%d6%82%d5%b2%d5%a5%d6%80%d5%ab-%d5%b8%d6%82%d5%bd%d5%a1%d5%b6%d5%b8%d5%b2%d5%b6%d5%a5%d6%80-%d5%a6%d6%80%d5%af%d5%be%d5%a5%d5%ac-%d5%a5%d5%b6-%d5%b8%d6%82%d5%bd%d5%a1%d5%b6%d5%b8/";a:1:{i:0;s:72:" <a href="http://canadianpharmacyrxwww.com/" target="_blank">cealis</a> ";}s:199:"/5-%d5%a3%d5%b5%d5%b8%d6%82%d5%b2%d5%a5%d6%80%d5%ab-%d5%b8%d6%82%d5%bd%d5%a1%d5%b6%d5%b8%d5%b2%d5%b6%d5%a5%d6%80-%d5%a6%d6%80%d5%af%d5%be%d5%a5%d5%ac-%d5%a5%d5%b6-%d5%b8%d6%82%d5%bd%d5%a1%d5%b6%d5%b8";a:1:{i:0;s:72:" <a href="http://canadianpharmacyrxwww.com/" target="_blank">cealis</a> ";}s:5:"/953/";a:1:{i:0;s:106:" <a href="http://www.bookofra-internet.com/was-ist-book-of-ra.html" target="_blank">online Book of ra</a> ";}s:4:"/953";a:1:{i:0;s:106:" <a href="http://www.bookofra-internet.com/was-ist-book-of-ra.html" target="_blank">online Book of ra</a> ";}s:95:"/category/%d5%be%d5%a5%d6%80%d5%ac%d5%b8%d6%82%d5%ae%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6/";a:1:{i:0;s:74:" <a href="http://seosprinter.net/" target="_blank">работа в интернете</a> ";}s:94:"/category/%d5%be%d5%a5%d6%80%d5%ac%d5%b8%d6%82%d5%ae%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6";a:1:{i:0;s:74:" <a href="http://seosprinter.net/" target="_blank">работа в интернете</a> ";}s:71:"/category/%d5%ba%d5%a1%d5%bf%d5%a1%d5%b0%d5%a1%d6%80%d5%b6%d5%a5%d6%80/";a:1:{i:0;s:147:" <a href="http://www.flashdress.ru/collection/svadiebnyie" target="_blank">Свадебные платья с камнями: топ 10 самых дорогих свадебных платьев</a>. ";}s:70:"/category/%d5%ba%d5%a1%d5%bf%d5%a1%d5%b0%d5%a1%d6%80%d5%b6%d5%a5%d6%80";a:1:{i:0;s:147:" <a href="http://www.flashdress.ru/collection/svadiebnyie" target="_blank">Свадебные платья с камнями: топ 10 самых дорогих свадебных платьев</a>. ";}s:83:"/category/%d5%bf%d5%b6%d5%bf%d5%a5%d5%bd%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6/";a:1:{i:0;s:76:" <a href="http://seosprinter.net/?p=946" target="_blank">работа из дома</a> ";}s:82:"/category/%d5%bf%d5%b6%d5%bf%d5%a5%d5%bd%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6";a:1:{i:0;s:76:" <a href="http://seosprinter.net/?p=946" target="_blank">работа из дома</a> ";}s:202:"/9-%d6%80%d5%a4-%d5%b4%d5%a1%d5%b6%d5%af%d5%a1%d5%ba%d5%a1%d6%80%d5%bf%d5%a5%d5%a6%d5%ab%d6%81-%d6%87%d5%bd-%d5%a5%d6%80%d5%af%d5%b8%d6%82-%d5%a5%d6%80%d5%a5%d5%ad%d5%a1-%d5%a7-%d5%b0%d5%b8%d5%bd%d5%ba/";a:1:{i:0;s:98:" <a href="http://skolko.freesubdomain.org" target="_blank">Сколько стоит декортаивный кирпич?</a> ";}s:201:"/9-%d6%80%d5%a4-%d5%b4%d5%a1%d5%b6%d5%af%d5%a1%d5%ba%d5%a1%d6%80%d5%bf%d5%a5%d5%a6%d5%ab%d6%81-%d6%87%d5%bd-%d5%a5%d6%80%d5%af%d5%b8%d6%82-%d5%a5%d6%80%d5%a5%d5%ad%d5%a1-%d5%a7-%d5%b0%d5%b8%d5%bd%d5%ba";a:1:{i:0;s:98:" <a href="http://skolko.freesubdomain.org" target="_blank">Сколько стоит декортаивный кирпич?</a> ";}s:200:"/%d6%81%d5%a5%d5%b2%d5%a1%d5%bd%d5%ba%d5%a1%d5%b6%d5%b8%d6%82%d5%a9%d5%b5%d5%a1%d5%b6-100-%d5%a1%d5%b4%d5%b5%d5%a1%d5%af%d5%ab-%d5%b4%d5%ab%d5%bb%d5%b8%d6%81%d5%a1%d5%bc%d5%b8%d6%82%d5%b4%d5%b6%d5%a5/";a:1:{i:0;s:129:" Essay writer, first rate essay <a href="http://write-essays-2016.weebly.com/" target="_blank">write-essays-2016.weebly.com</a>. ";}s:199:"/%d6%81%d5%a5%d5%b2%d5%a1%d5%bd%d5%ba%d5%a1%d5%b6%d5%b8%d6%82%d5%a9%d5%b5%d5%a1%d5%b6-100-%d5%a1%d5%b4%d5%b5%d5%a1%d5%af%d5%ab-%d5%b4%d5%ab%d5%bb%d5%b8%d6%81%d5%a1%d5%bc%d5%b8%d6%82%d5%b4%d5%b6%d5%a5";a:1:{i:0;s:129:" Essay writer, first rate essay <a href="http://write-essays-2016.weebly.com/" target="_blank">write-essays-2016.weebly.com</a>. ";}s:78:"/category/%D5%B0%D5%A1%D5%B4%D5%A1%D5%B5%D5%B6%D6%84%D5%B6%D5%A5%D6%80/page/2/";a:1:{i:0;s:79:" <a href="http://www.stop-mlm.com/p/tiens.html" target="_blank">Всё об МЛМ</a> ";}s:77:"/category/%D5%B0%D5%A1%D5%B4%D5%A1%D5%B5%D5%B6%D6%84%D5%B6%D5%A5%D6%80/page/2";a:1:{i:0;s:79:" <a href="http://www.stop-mlm.com/p/tiens.html" target="_blank">Всё об МЛМ</a> ";}s:95:"/category/%d5%b0%d5%a1%d5%bd%d5%a1%d6%80%d5%a1%d5%af%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6/";a:1:{i:0;s:214:" <a href="http://www.flashdress.ru/collection/koktieilnyie-platia-jovani/product/sieksualnoie-korotkoie-platie-s-kamniami-jovani-7757" target="_blank">Jovani 7757 купить - женские платья jovani джовани купить</a>. ";}s:94:"/category/%d5%b0%d5%a1%d5%bd%d5%a1%d6%80%d5%a1%d5%af%d5%b8%d6%82%d5%a9%d5%b5%d5%b8%d6%82%d5%b6";a:1:{i:0;s:214:" <a href="http://www.flashdress.ru/collection/koktieilnyie-platia-jovani/product/sieksualnoie-korotkoie-platie-s-kamniami-jovani-7757" target="_blank">Jovani 7757 купить - женские платья jovani джовани купить</a>. ";}s:198:"/%d5%b0%d5%b5%d5%b8%d6%82%d5%bd%d5%ab%d5%bd-%d5%a1%d6%80%d6%87%d5%a5%d5%ac%d5%b5%d5%a1%d5%b6-%d5%a9%d5%a1%d5%b2%d5%a1%d5%b4%d5%a1%d5%bd%d5%ab-%d5%b0%d6%80%d5%a4%d5%a5%d5%b0%d5%be%d5%a1%d5%ae-%d5%a2/";a:1:{i:0;s:93:" <a href="http://cheapestcarinsuranceus.com/" target="_blank">local car insurance agents</a> ";}s:197:"/%d5%b0%d5%b5%d5%b8%d6%82%d5%bd%d5%ab%d5%bd-%d5%a1%d6%80%d6%87%d5%a5%d5%ac%d5%b5%d5%a1%d5%b6-%d5%a9%d5%a1%d5%b2%d5%a1%d5%b4%d5%a1%d5%bd%d5%ab-%d5%b0%d6%80%d5%a4%d5%a5%d5%b0%d5%be%d5%a1%d5%ae-%d5%a2";a:1:{i:0;s:93:" <a href="http://cheapestcarinsuranceus.com/" target="_blank">local car insurance agents</a> ";}s:200:"/2013%d5%a9-%d5%a8-%d5%bd%d5%a1%d5%af%d5%a1%d5%be%d5%a1%d5%bb%d5%b8%d6%82%d6%80-%d5%a7-%d5%a5%d5%b2%d5%a5%d5%ac-%d5%ba%d5%a5%d5%bf%d6%84-%d5%a7-%d5%b4%d5%bf%d5%a1%d5%ae%d5%a5%d5%ac-%d5%b8%d5%bc%d5%b8/";a:1:{i:0;s:74:" <a href="http://viagraachetergenerique.com/" target="_blank">website</a> ";}s:199:"/2013%d5%a9-%d5%a8-%d5%bd%d5%a1%d5%af%d5%a1%d5%be%d5%a1%d5%bb%d5%b8%d6%82%d6%80-%d5%a7-%d5%a5%d5%b2%d5%a5%d5%ac-%d5%ba%d5%a5%d5%bf%d6%84-%d5%a7-%d5%b4%d5%bf%d5%a1%d5%ae%d5%a5%d5%ac-%d5%b8%d5%bc%d5%b8";a:1:{i:0;s:74:" <a href="http://viagraachetergenerique.com/" target="_blank">website</a> ";}s:202:"/%d5%a1%d6%80%d5%a1%d5%a3%d5%a1%d5%ae%d5%a1%d5%be%d5%a1%d5%b6%d5%b8%d6%82%d5%b4-%d5%b6%d5%b8%d6%82%d5%b5%d5%b6%d5%ab%d5%bd%d5%af-%d5%b3%d5%a1%d5%b6%d5%a1%d5%ba%d5%a1%d6%80%d5%b0%d5%b6%d5%a5%d6%80%d5%b6/";a:1:{i:0;s:85:" <a href="http://buyviewsreview.com/" target="_blank">buy real youtube views buy</a> ";}s:201:"/%d5%a1%d6%80%d5%a1%d5%a3%d5%a1%d5%ae%d5%a1%d5%be%d5%a1%d5%b6%d5%b8%d6%82%d5%b4-%d5%b6%d5%b8%d6%82%d5%b5%d5%b6%d5%ab%d5%bd%d5%af-%d5%b3%d5%a1%d5%b6%d5%a1%d5%ba%d5%a1%d6%80%d5%b0%d5%b6%d5%a5%d6%80%d5%b6";a:1:{i:0;s:85:" <a href="http://buyviewsreview.com/" target="_blank">buy real youtube views buy</a> ";}s:24:"__sape_show_only_block__";b:0;s:18:"__sape_block_tpl__";a:3:{s:3:"css";s:2297:"<style type='text/css'> .block_links * { background:transparent none repeat scroll 0 0 !important; border:medium none !important; clear:none !important; clip:rect(auto, auto, auto, auto) !important; font-size:100% !important; font-style:normal !important; font-variant:normal !important; font-weight:normal !important; height:auto !important; letter-spacing:normal !important; line-height:normal !important; margin:0 !important; overflow:visible !important; padding:0 !important; position:static !important; text-align:left !important; text-decoration:none !important; text-indent:0 !important; text-transform:none !important; vertical-align:baseline !important; visibility:visible !important; white-space:normal !important; width:auto; word-spacing:normal !important; z-index:auto !important; cursor: pointer!important; word-wrap: break-word!important; } .block_links li { display:list-item !important; list-style-image:none !important; list-style-position:outside !important; list-style-type:none !important; display: inline; } .block_links li DIV { padding:0.5em !important; } .block_links DIV, .block_links TABLE { padding: 5px !important; } .block_links { width: 300px!important; font-family: Verdana!important; font-size: 11px!important; border: 1px solid #DDDDDD!important; background-color: #FFFFFF!important; padding:5px!important; position: relative!important; display:block!important; -webkit-border-radius:5px !important; -khtml-border-radius:5px !important; -moz-border-radius:5px !important; border-radius:5px !important; } .block_links_icnt, .block_links_icnt * { text-align: left!important; } .block_links_text, .block_links_text A, .block_links_text A:hover { color: #000000!important; font-size: 11px!important; text-decoration: none!important; } .block_links_url { color: #006600!important; font-size: 11px!important; text-decoration: none!important; } .block_links_header, .block_links_header A { color: #000066!important; font-size: 13px!important; font-weight: bold!important; text-decoration: underline!important; } .block_links_sign { color: #999999!important; font-size: 10px!important; text-align: left!important; text-decoration: none!important; } .block_links_clear { clear:both!important; } .block_links TABLE { width: 100%!important; border: 0px!important; } </style>";i:1;a:3:{s:5:"block";s:88:"<div class='block_links' {block_style_custom}> <table> <tr> {items} </tr> </table></div>";s:14:"item_container";s:68:"<td class='block_links_icnt' style='width:{td_width}%'> {item} </td>";s:4:"item";s:209:"<span onclick='window.open(&#39;{link}&#39;, &#39;_blank&#39;); return false;'><p class='block_links_header'> {header} </p> <p class='block_links_text'> {text} </p><p class='block_links_url'> {url} </p></span>";}i:0;a:3:{s:5:"block";s:71:"<div class='block_links' {block_style_custom}> <ul> {items} </ul></div>";s:14:"item_container";s:54:"<li class='block_links_icnt' ><div> {item} </div></li>";s:4:"item";s:209:"<span onclick='window.open(&#39;{link}&#39;, &#39;_blank&#39;); return false;'><p class='block_links_header'> {header} </p> <p class='block_links_text'> {text} </p><p class='block_links_url'> {url} </p></span>";}}s:26:"__sape_block_tpl_options__";a:2:{s:17:"block_orientation";i:0;s:12:"block_no_css";b:0;}s:23:"__sape_block_uri_idna__";a:0:{}s:20:"__sape_teasers_css__";s:4947:"<style type="text/css">
+            .teaser_block * {
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                background: transparent none repeat scroll 0 0;
+                clear: none;
+                clip: rect(auto, auto, auto, auto);
+                font-size: 100%;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                height: auto;
+                letter-spacing: normal;
+                position: static;
+                text-align: left;
+                text-indent: 0;
+                text-transform: none;
+                vertical-align: baseline;
+                visibility: visible;
+                white-space: normal;
+                width: auto;
+                word-spacing: normal;
+                z-index: auto;
+                word-wrap: break-word;
+            }
+
+            .teaser_block {
+                overflow: hidden;
+                border: 1px solid silver;
+                background-color: white;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+            }
+            .teaser_list {
+                white-space: nowrap;
+                font-size: 0;
+            }
+            .teaser_item {
+                white-space: normal;
+                font-size: 14px;
+                height: 100%;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                position: relative;
+            }
+            .teaser_item:hover {
+                background-color: #FCFBF7;
+            }
+            .teaser_item:hover .teaser_item_block a {
+                color: red;
+            }
+            .teaser_item_block {
+                font-family: Arial, Helvetica, Tahoma, Verdana, Sans-Serif;
+                font-size: 14px;
+                text-align: left !important;
+                line-height: 130%;
+                height: 100%;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+            }
+            .teaser_item_block img {
+                width: 80px;
+                border: 0;
+                position: absolute;
+                padding: 3px;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                top: 0;
+                left: 5px;
+                margin: auto;
+                height: 100%;
+                max-height: 80px;
+            }
+            .teaser_item_block a {
+                color: #0645AD;
+            }
+            .teaser_item_block a:hover {
+                color: red;
+            }
+            .teaser_list_small  .teaser_item_block {
+                padding: 2px 2px 2px 70px !important;
+                font-size: 11px;
+                line-height: 110%;
+            }
+            .teaser_list_small .teaser_item_block img {
+                width: auto;
+                max-width: 80px;
+            }
+            .teaser_list_hor {
+                height: 100%;
+            }
+            .teaser_list_hor > .teaser_item {
+                display: inline-block;
+                width: 50%;
+                float: left;
+            }
+            .teaser_list_hor .teaser_item_block, .teaser_list_square .teaser_item_block {
+                padding: 5px 5px 5px 90px;
+            }
+            .teaser_list_hor .teaser_item_block img, .teaser_list_square .teaser_item_block img {
+                bottom: 0;
+            }
+            .teaser_list_hor > .teaser_item:last-child {
+                border-left: 1px dotted silver;
+            }
+            .teaser_list_square, .teaser_list_ver {
+                height: 50%;
+            }
+            .teaser_list_square > .teaser_item:last-child, .teaser_list_ver > .teaser_item:last-child {
+                border-top: 1px dotted silver;
+            }
+            .teaser_list_ver .teaser_item_block {
+                padding: 100px 10px 10px 10px;
+            }
+            .teaser_list_ver .teaser_item_block img {
+                top: 10px;
+                right: 0;
+            }
+
+            .teaser_block_240x400 {
+                width: 240px;
+                height: 400px;
+            }
+            .teaser_block_728x90 {
+                width: 728px;
+                height: 90px;
+            }
+            .teaser_block_300x250 {
+                width: 300px;
+                height: 250px;
+            }
+            .teaser_block_468x60 {
+                width: 468px;
+                height: 60px;
+            }
+            .teaser_block_160x600 {
+                width: 160px;
+                height: 600px;
+            }
+</style>";s:16:"__sape_new_url__";s:20:"<!--2280014057594-->";s:26:"__sape_new_teasers_block__";s:21:"<!--t2280014057594-->";s:16:"__sape_charset__";s:12:"windows-1251";s:15:"__last_update__";i:1448556800;s:14:"__multi_site__";b:0;s:21:"__fetch_remote_type__";s:17:"file_get_contents";s:15:"__ignore_case__";b:0;s:15:"__php_version__";s:5:"5.2.8";s:19:"__server_software__";s:6:"Apache";}

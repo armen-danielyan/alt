@@ -533,6 +533,10 @@ img {
 #archive li:hover {
 	background-color: #dee4ea;
 }
+#community{
+	background-color: #dee4ea;
+	padding: 10px;
+}
 /*-----------------------------------------------------------------------*/
 /*Pageination*/
 .pagination {

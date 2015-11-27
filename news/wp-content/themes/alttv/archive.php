@@ -4,7 +4,22 @@
 	<div id="archive">
 		<?php wp_reset_query();
 		if (have_posts()) :	
-			if (is_category()) { ?>
+			if (is_category()) {
+				if (is_category("529")){ ?>
+					<div id="community">
+						<?php $arg = array(
+							"child_of" => 529,
+							"hide_empty" => 0
+						);
+						$cats = get_categories($arg); ?>
+						<ul>
+							<?php foreach($cats as $cat){ ?>
+								<?php $catLink = get_category_link($cat->term_id); ?>
+								<li><a href="<?php echo $catLink; ?>"><?php echo $cat->name; ?></a></li>
+							<?php } ?>
+						</ul>
+					</div>
+				<?php } ?>
 				<h2>ԱՐԽԻՎ` <?php single_cat_title(); ?></h2>
 			<?php } elseif (is_tag()) { ?>
 				<h2>ԱՐԽԻՎ` <?php single_tag_title(); ?></h2>
