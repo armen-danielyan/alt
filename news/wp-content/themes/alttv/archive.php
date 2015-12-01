@@ -3,6 +3,7 @@
 <div id="content">
 	<div id="archive">
 		<?php if (have_posts()) :
+			$t = false;
 			if (is_category()) {
 				$currentCat = get_query_var('cat');
 				$arg = array(
@@ -14,6 +15,7 @@
 				$parrentCatsArray = explode(',', $parrentCats);
 
 				if (is_category(529) || count($parrentCatsArray) > 2){ ?>
+					<?php $t = true; ?>
 					<div id="community">
 						<ul>
 							<?php foreach($cats as $cat){ ?>
@@ -50,6 +52,18 @@
 			<h3><?php echo '...'; ?></h3>
 		<?php endif; ?>
 	</div>
+	<div class="cleaner"></div>
+	<?php if($t){ ?>
+		<div id="banner">
+			<div class="bannerLeft">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/banner1.jpg" />
+			</div>
+			<div class="bannerRight">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/banner2.jpg" />
+			</div>
+			<div class="bannerText">Այս կայքը գործում է «Մեդիան քաղաքացիների տեղեկացված մասնակցության համար» ծրագրի շրջանակում, որը հնարավոր է դարձել Ամերիկայի ժողովրդի աջակցությամբ ԱՄՆ Միջազգային զարգացման գործակալության (ԱՄՆ ՄԶԳ) միջոցով: Կայքի բովանդակության համար պատասխանատվությունը միմիայն հեղինակներինն է և պարտադիր չէ, որ արտահայտի ԱՄՆ ՄԶԳ կամ ԱՄՆ կառավարության տեսակետները:</div>
+		</div>
+	<?php } ?>
 </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -98,6 +98,12 @@ body {
 	font-size: 20px !important;
 	line-height: 24px !important;
 }
+#community ul li {
+	width: 140px !important;
+}
+.bannerLeft, .bannerRight{
+	width: 300px !important;
+}
 }
 @media (max-width: 320px) {
 #header {
@@ -536,6 +542,27 @@ img {
 #community{
 	background-color: #dee4ea;
 	padding: 10px;
+	border-top: 10px solid #9eb0bf;
+	border-bottom: 1px solid #9eb0bf;
+	color: #5e707f;
+	margin-bottom: 20px;
+}
+#community ul {
+	padding: 0;
+	border: none;
+    font-size: 0;
+}
+#community ul li {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    width: 150px;
+}
+#community a {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
 }
 /*-----------------------------------------------------------------------*/
 /*Pageination*/
@@ -606,6 +633,32 @@ img {
 .sapead a:hover {
     color: #ca0302;
 }
+#banner {
+	margin-top: 20px;
+	border-top: 1px solid #dee4ea;
+}
+#banner img {
+	width: 100%;
+}
+.bannerLeft, .bannerRight{
+	width: 310px;
+}
+.bannerLeft {
+	float: left;
+}
+.bannerRight {
+	float: right;
+}
+.bannerText {
+	clear: both;
+	font-size: 11px;
+	line-height: 15px;
+	text-align: justify;
+	color: #3e4a55;
+	text-indent: 20px;
+	padding: 10px;
+}
+
 #footer {
 	margin: 20px auto;
 	padding: 10px 0;

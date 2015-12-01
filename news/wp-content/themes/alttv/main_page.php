@@ -1,6 +1,6 @@
 <div id="category-list">
 	<?php wp_reset_query();
-	$categories = get_categories(array('orderby' => 'id', 'exclude' => '352, 669, 530, 9, 5'));
+	$categories = get_categories(array('orderby' => 'id', 'exclude' => '352,669,530,9,5,1032,1033,1034,1035,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053'));
 	foreach ($categories as $cat) : ?>
 		<div class="category-item">
 			<?php $j = 0;
