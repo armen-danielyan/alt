@@ -34,6 +34,10 @@
                             <?php the_post_thumbnail('post-thumb'); ?>
                         </a>
                     <?php } ?>
+                    <div id="text-size">
+                        <span id="text-size-inc"><i class="fa fa-plus"></i></span>
+                        <span id="text-size-dec"><i class="fa fa-minus"></i></span>
+                    </div>
                     <?php the_content(); ?>
                     <div class="viewscount">
                         <?php wpb_set_post_views(get_the_ID());

@@ -620,6 +620,24 @@ img {
     float: left;
 }
 
+#text-size {
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dee4ea;
+}
+
+#text-size span {
+    color: #5e707f;
+    cursor: pointer;
+    float: right;
+    padding: 5px;
+    display: block;
+}
+
+#text-size span:hover {
+    color: #ca0302;
+}
+
 /*-----------------------------------------------------------------------*/
 #archive {
     margin: 0 10px;

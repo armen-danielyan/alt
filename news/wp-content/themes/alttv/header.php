@@ -28,6 +28,8 @@
     <!-- Add jQuery library -->
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.8.2.js"></script>
 
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
+
     <!-- Add mousewheel plugin (this is optional) -->
     <script type="text/javascript"
             src="<?php bloginfo('stylesheet_directory'); ?>/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -98,7 +100,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    
 
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.nicescroll.js"></script>
 

@@ -58,7 +58,7 @@ function file_uploader_html(){
     <input type="hidden" name="documentmeta_noncename" id="documentmeta_noncename" value="<?php echo wp_create_nonce(plugin_basename(__FILE__)); ?>" />
     <?php $documentURL = get_post_meta($post->ID, "_document_url", true); ?>
     <input type="text" name="_document_url" value="<?php echo $documentURL; ?>" class="widefat" id="documentURL" />
-    <input type="button" class="button-primary" value="Upload Image" id="fileupload" />
+    <input type="button" class="button-primary" value="Upload Document" id="fileupload" />
 
     <script>
         jQuery(document).ready(function($){
