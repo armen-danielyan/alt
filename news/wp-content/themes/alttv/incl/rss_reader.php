@@ -1,4 +1,3 @@
-<h2 class="dw-logo">DW НОВОСТИ</h2>
 <div id="rss-posts">
 	<?php $rssurl = 'http://rss.dw.de/xml/rss-ru-news';
 	if ($rssxml = simplexml_load_file($rssurl)) { ?>
@@ -18,6 +17,15 @@
 </div>
 <script>
 	$(document).ready(function() {
-		$(".rss-box").niceScroll({touchbehavior:false, cursorcolor:"#5e707f", cursoropacitymax:0, cursorwidth:8, cursorborder:"none", cursorborderradius:"0px", background:"#ccc", autohidemode:"false"})
+		$(".rss-box").niceScroll({
+			touchbehavior:false,
+			cursorcolor:"#5e707f",
+			cursoropacitymax:0,
+			cursorwidth:8,
+			cursorborder:"none",
+			cursorborderradius:"0px",
+			background:"#ccc",
+			autohidemode:"false"
+		})
 	});
 </script>

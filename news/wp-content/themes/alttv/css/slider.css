@@ -2,7 +2,8 @@
 	margin: 10px;
 	float: left;
 }
-#featured { 
+#featured {
+	border-radius: 4px;
 	width: 512px;
 	padding: 10px 416px 10px 10px; 
 	position: relative; 

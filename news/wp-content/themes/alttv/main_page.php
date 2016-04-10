@@ -1,14 +1,13 @@
 <div id="category-list">
 	<?php wp_reset_query();
-	$categories = get_categories(array('orderby' => 'id', 'exclude' => '352,669,530,9,5,1032,1033,1034,1035,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053'));
-	foreach ($categories as $cat) : ?>
+    $categories = array( 10, 8, 940, 529, 6, 7);
+	foreach($categories as $cat) : ?>
 		<div class="category-item">
 			<?php $j = 0;
-			query_posts(array('orderby' => 'date', 'posts_per_page' => 4, 'cat' => $cat->term_id));
+			query_posts(array('orderby' => 'date', 'posts_per_page' => 4, 'cat' => $cat));
 			if (have_posts()) : 
-				$cat_name = $cat->name;
-				$cat_id = get_cat_id($cat_name);
-				$cat_url = get_category_link($cat_id); ?>
+				$cat_name = get_cat_name($cat);
+				$cat_url = get_category_link($cat); ?>
 				<a href=<?php echo $cat_url; ?>><h2><?php echo mb_strtoupper($cat_name, 'UTF-8'); ?></h2></a>
 				<?php while (have_posts()) : the_post(); 
 					$j++; ?>

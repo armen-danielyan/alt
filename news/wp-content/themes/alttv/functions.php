@@ -1,4 +1,12 @@
 <?php
+// Register Scripts And Styles
+//////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'loadScriptsStyles' );
+function loadScriptsStyles() {
+    wp_register_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?hl=hy&onload=onloadRecaptcha&render=explicit', '', '', true );
+    wp_enqueue_script( 'recaptcha' );
+}
+
 
 // Register Documents Custom Post Type AND Custom Field
 //////////////////////////////////////////////////////////////////
@@ -20,16 +28,11 @@ function create_document_cpt(){
             "not_found"          => "Not Found",
             "not_found_in_trash" => "Not found in Trash",
         ),
-        "label"             => "Documents",
-        "description"       => "Documents",
-        "supports"          => array(
-            "title",
-            "revisions",
-            "custom-fields"
-        ),
-        "taxonomies"           => array(
-            "category"
-        ),
+        "label"                => "Documents",
+        "description"          => "Documents",
+        "menu_icon"            => "dashicons-media-text",
+        "supports"             => array("title", "revisions", "custom-fields"),
+        "taxonomies"           => array("category"),
         "hierarchical"         => false,
         "public"               => true,
         "show_ui"              => true,
@@ -43,9 +46,7 @@ function create_document_cpt(){
         "publicly_queryable"   => true,
         "capability_type"      => "page",
         "register_meta_box_cb" => "add_file_uploader",
-        "rewrite"              => array(
-            "slug"                  => "document"
-        )
+        "rewrite"              => array("slug" => "document")
     );
     register_post_type("document", $cptOptions, 0);
 }
@@ -110,6 +111,149 @@ add_action("admin_enqueue_scripts", "add_scripts");
 function add_scripts() {
     wp_enqueue_media();
 }
+
+// Category add custom fields
+//////////////////////////////////////////////////////////////////
+add_action('category_add_form_fields', 'add_custom_fields', 10, 2);
+function add_custom_fields($taxonomy) { ?>
+    <div class="form-field term-group-wrap">
+        <label for="cat-map-longitude">Longitude</label>
+        <input type="text" name="cat-map-longitude" id="cat-map-longitude" class="postform" value="">
+
+        <label for="cat-map-latitude">Latitude</label>
+        <input type="text" name="cat-map-latitude" id="cat-map-latitude" class="postform" value="">
+    </div>
+<?php }
+
+add_action('created_category', 'save_custom_fields', 10, 2);
+function save_custom_fields($term_id, $tt_id){
+    if(isset( $_POST['cat-map-longitude'] ) && $_POST['cat-map-longitude'] !== ''){
+        $longitude = sanitize_text_field($_POST['cat-map-longitude']);
+        add_term_meta($term_id, 'map-longitude', $longitude, true);
+    }
+    if(isset( $_POST['cat-map-latitude'] ) && $_POST['cat-map-latitude'] !== ''){
+        $latitude = sanitize_text_field($_POST['cat-map-latitude']);
+        add_term_meta($term_id, 'map-latitude', $latitude, true);
+    }
+}
+
+add_action('category_edit_form_fields', 'edit_custom_fields', 10, 2);
+function edit_custom_fields($term, $taxonomy){
+    $longitude = get_term_meta($term->term_id, 'map-longitude', true);
+    $latitude = get_term_meta($term->term_id, 'map-latitude', true); ?>
+
+    <tr class="form-field term-group-wrap">
+        <th scope="row"><label for="cat-map-longitude">Longitude</label></th>
+        <td><input type="text" name="cat-map-longitude" id="cat-map-longitude" class="postform" value="<?php echo $longitude; ?>"></td>
+    </tr>
+    <tr class="form-field term-group-wrap">
+        <th scope="row"><label for="cat-map-latitude">Latitude</label></th>
+        <td><input type="text" name="cat-map-latitude" id="cat-map-latitude" class="postform" value="<?php echo $latitude; ?>"></td>
+    </tr>
+<?php }
+
+add_action('edited_category', 'update_custom_fields', 10, 2);
+function update_custom_fields($term_id, $tt_id){
+    if(isset($_POST['cat-map-longitude']) && $_POST['cat-map-longitude'] !== ''){
+        $longitude = sanitize_text_field($_POST['cat-map-longitude']);
+        update_term_meta($term_id, 'map-longitude', $longitude);
+    }
+    if(isset($_POST['cat-map-latitude']) && $_POST['cat-map-latitude'] !== ''){
+        $latitude = sanitize_text_field($_POST['cat-map-latitude']);
+        update_term_meta($term_id, 'map-latitude', $latitude);
+    }
+}
+
+
+/**
+ * Register Reliable CPT
+ */
+
+add_action( 'init', 'Create_Reliable_Information_CPT', 0 );
+function Create_Reliable_Information_CPT() {
+    $labels = array(
+        'name'                  => 'Reliable Informations',
+        'singular_name'         => 'Reliable Information',
+        'menu_name'             => 'Information',
+        'parent_item_colon'     => 'Parent Information',
+        'all_items'             => 'All Informations',
+        'view_item'             => 'View Information',
+        'add_new_item'          => 'Add New Information',
+        'add_new'               => 'Add Information',
+        'edit_item'             => 'Edit Information',
+        'update_item'           => 'Update Information',
+        'search_items'          => 'Search Information',
+        'not_found'             => 'Not Found',
+        'not_found_in_trash'    => 'Not found in Trash'
+    );
+    $args = array(
+        'label'                 => 'Reliable Informations',
+        'description'           => 'Reliable Informations',
+        'menu_icon'             => 'dashicons-list-view',
+        'menu_position'         => 7,
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'excerpt' ),
+        'taxonomies'            => array( 'post_tag' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'page',
+        'register_meta_box_cb'  => 'AddReliableMetaboxes'
+    );
+    register_post_type( 'reliable-information', $args );
+}
+
+
+/**
+ * Register Dictionary CPT
+ */
+
+add_action( 'init', 'Create_Dictionary_CPT', 0 );
+function Create_Dictionary_CPT() {
+    $labels = array(
+        'name'                  => 'Dictionary',
+        'singular_name'         => 'Word',
+        'menu_name'             => 'Dictionary',
+        'parent_item_colon'     => 'Parent Dictionary',
+        'all_items'             => 'All Words',
+        'view_item'             => 'View Word',
+        'add_new_item'          => 'Add New Word',
+        'add_new'               => 'Add New',
+        'edit_item'             => 'Edit Word',
+        'update_item'           => 'Update Word',
+        'search_items'          => 'Search Word',
+        'not_found'             => 'Not Found',
+        'not_found_in_trash'    => 'Not found in Trash'
+    );
+    $args = array(
+        'label'                 => 'dictionary',
+        'description'           => 'dictionary',
+        'menu_icon'             => 'dashicons-book-alt',
+        'menu_position'         => 6,
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'revisions' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'show_in_nav_menus'     => true,
+        'show_in_admin_bar'     => true,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'page'
+    );
+    register_post_type( 'dictionary', $args );
+}
+
 
 // Register sidebar
 //////////////////////////////////////////////////////////////////
@@ -275,6 +419,7 @@ function wpb_get_post_views($postID)
 //////////////////////////////////////////////////////////
 function meta_post_keywords()
 {
+    $meta_post_keywords = '';
     $posttags = get_the_tags();
     foreach ((array)$posttags as $tag) {
         $meta_post_keywords .= $tag->name . ', ';
@@ -440,4 +585,26 @@ function dimox_breadcrumbs()
     }
 } // end dimox_breadcrumbs()
 
-?>
+
+/**
+ * Get Dictionary Word Meaning
+ */
+
+add_action('wp_ajax_word_meaning', 'wordMeaning');
+add_action('wp_ajax_nopriv_word_meaning', 'wordMeaning');
+
+function wordMeaning(){
+    $postid = (isset($_POST['postid'])) ? $_POST['postid'] : '';
+
+    if($postid){
+        $getPost = get_post($postid);
+        $postTitle = $getPost -> post_title;
+        $postContent = $getPost -> post_content;
+
+        echo json_encode(array('status' => 1, 'statusMsg' => 'Post successfully found.', 'postTitle' => $postTitle, 'postContent' => $postContent));
+    } else {
+        echo json_encode(array('status' => 0, 'statusMsg' => 'Can\'t get post information.'));
+    }
+
+    wp_die();
+}

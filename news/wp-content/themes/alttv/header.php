@@ -1,7 +1,6 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="hy">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" href="<?php echo home_url('/') . 'favicon.ico'; ?>" type="image/x-icon"/>
@@ -26,7 +25,7 @@
 
     <!------------------------------>
     <!-- Add jQuery library -->
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.8.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
 
@@ -100,7 +99,6 @@
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-    
 
     <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.nicescroll.js"></script>
 
@@ -131,6 +129,17 @@ if (!defined('_SAPE_USER')) {
 require_once(realpath($_SERVER['DOCUMENT_ROOT'] . '/' . _SAPE_USER . '/sape.php'));
 $sape = new SAPE_client();
 ?>
+
+<!--Facebook SDK-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/hy_AM/sdk.js#xfbml=1&version=v2.5&appId=374141902638189";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<!--/Facebook SDK-->
 
 <!--Google tracking code-->
 <script>
@@ -185,6 +194,20 @@ $sape = new SAPE_client();
     <div><img src="//mc.yandex.ru/watch/19786015" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+<!--Modal-->
+<div id="modal-bgr" style="display:none;">
+    <div class="modal-wrapper">
+        <div class="modal-head">
+            <div id="modal-close"><i class="fa fa-times"></i></div>
+        </div>
+        <div class="modal-body" style="display:none;">
+            <div class="modal-post-title"></div>
+            <div class="modal-post-content"></div>
+        </div>
+        <div class="modal-loader"><i class="fa fa-refresh fa-spin"></i></div>
+    </div>
+</div>
+<!--/Modal-->
 <div id="scr">
     <div id="header">
         <div id="header-top-nav">
@@ -213,6 +236,9 @@ $sape = new SAPE_client();
             </div>
             <div id="header-col4" class="header-cols">
                 <?php include('currency.php'); ?>
+            </div>
+            <div id="header-col6" class="header-cols">
+                <a href="https://play.google.com/store/apps/details?id=am.alttv.alttv&hl=enhttps://play.google.com/store/apps/details?id=am.alttv.alttv&hl=en" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/google-play.png" width="160" height="52" alt=""></a>
             </div>
             <div id="header-col5" class="header-cols">
                 <?php get_search_form(); ?>

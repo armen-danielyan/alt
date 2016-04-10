@@ -12,11 +12,11 @@
 			</div>
 			<div id="footer-col2">
 				<ul>
-					<li><a href="http://www.facebook.com/alttv.am" title="Facebook" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" width=32 height=32 /></a></li>
-					<li><a href="http://plus.google.com/+AlttvAm" title="Google+" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/google+.png" width=32 height=32 /></a></li>
-					<li><a href="http://twitter.com/alttv" title="Twitter" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" width=32 height=32 /></a></li>
-					<li><a href="http://www.flickr.com/photos/alttv" title="Flickr" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/flickr.png" width=32 height=32 /></a></li>
-					<li><a href="http://www.youtube.com/user/alttvam" title="Youtube" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/youtube.png" width=32 height=32 /></a></li>
+					<li><a href="http://www.facebook.com/alttv.am" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="http://plus.google.com/+AlttvAm" title="Google+" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
+					<li><a href="http://twitter.com/alttv" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="http://www.flickr.com/photos/alttv" title="Flickr" target="_blank"><i class="fa fa-flickr"></i></a></li>
+					<li><a href="http://www.youtube.com/user/alttvam" title="Youtube" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
 				</ul>
 			</div>
 		</div>

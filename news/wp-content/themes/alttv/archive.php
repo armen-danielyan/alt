@@ -24,7 +24,12 @@
                         </ul>
                     </div>
                     <?php if(count($parrentCatsArray) > 2){ ?>
-                        <div class="documents">
+                        <div id="tabs">
+                            <div id="tab-button-1" class="tab-button active-tab">Արխիվ</div>
+                            <div id="tab-button-2" class="tab-button">Ավագանի</div>
+                            <div id="tab-button-3" class="tab-button">Տեղեկություններ</div>
+                        </div>
+                        <div class="documents" id="tab2" style="display: none;">
                             <?php $docsArgs = array(
                                 "post_type" => "document",
                                 "cat" => $currentCat,
@@ -33,7 +38,7 @@
                             );
                             $docsQuery = new WP_Query($docsArgs);
                             if($docsQuery -> have_posts()) : ?>
-                                <h3>Ավագանու որոշումներ</h3>
+                                <h2>Ավագանու որոշումներ</h2>
                                 <ul>
                                     <?php while($docsQuery -> have_posts()): $docsQuery -> the_post(); ?>
                                         <li>
@@ -83,6 +88,43 @@
                             <?php endif; ?>
 
                         </div>
+                        <div id="tab3" style="display: none;">
+                            <h2>Տեղեկություններ համայնքի մասին</h2>
+
+                            <?php $termLongitude = get_term_meta($currentCat, 'map-longitude', true);
+                            $termLatitude = get_term_meta($currentCat, 'map-latitude', true);
+
+                            if(!empty($termLongitude) && !empty($termLatitude)){
+                                $LatLng = esc_attr($termLongitude) . ',' . esc_attr($termLatitude);
+                            } ?>
+                            <script
+                                src="http://maps.googleapis.com/maps/api/js">
+                            </script>
+
+                            <script>
+                                var myCenter=new google.maps.LatLng(<?php echo $LatLng; ?>);
+
+                                function initialize(){
+                                    var mapProp = {
+                                        center:myCenter,
+                                        zoom:13,
+                                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                                    };
+
+                                    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+                                    var marker=new google.maps.Marker({
+                                        position:myCenter
+                                    });
+                                    marker.setMap(map);
+                                }
+                            </script>
+
+                            <div id="googleMap" style="height:250px;"></div>
+                            <div id="termDescription">
+                                <?php echo term_description($currentCat, 'category'); ?>
+                            </div>
+                        </div>
                     <?php }
                 }
                 $taxTitle = single_cat_title("", false);
@@ -94,30 +136,32 @@
                 $taxTitle = arm_month(get_the_time('n'), long) . ', ' . get_the_time('Y');
             } elseif (is_year()) {
                 $taxTitle = get_the_time('Y');
-            }
-            if(have_posts()) : ?>
-                <h2><?php echo 'ԱՐԽԻՎ` ' . $taxTitle; ?></h2>
-                <ul>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <li>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
-                                    the_post_thumbnail('thumbnail');
-                                } ?>
-                                <span>
-                                    <?php the_time('j');
-                                    echo ' ' . arm_month(get_the_time('n'), long) . ', ';
-                                    the_time('Y'); ?>
-                                </span>
-                                <?php the_title(); ?>
-                            </a>
-                        </li>
-                    <?php endwhile; ?>
-                </ul>
-            <?php endif; ?>
-            <?php if (function_exists('pagination')) {
-                pagination();
             } ?>
+            <div id="tab1" style="display: block;">
+                <?php if(have_posts()) : ?>
+                    <h2><?php echo 'ԱՐԽԻՎ` ' . $taxTitle; ?></h2>
+                    <ul>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <li>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
+                                        the_post_thumbnail('thumbnail');
+                                    } ?>
+                                    <span>
+                                        <?php the_time('j');
+                                        echo ' ' . arm_month(get_the_time('n'), long) . ', ';
+                                        the_time('Y'); ?>
+                                    </span>
+                                    <?php the_title(); ?>
+                                </a>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+                <?php if (function_exists('pagination')) {
+                    pagination();
+                } ?>
+            </div>
         </div>
 
     </div>

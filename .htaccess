@@ -1,0 +1,137 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /news/
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /news/index.php [L]
+</IfModule>
+# END WordPress
+
+# Blocked IP
+<Limit GET POST>
+	allow from all
+	deny from 213.172.64.0/19
+	deny from 109.127.0.0/18
+	deny from 185.40.32.0/22
+	deny from 91.191.192.0/20
+	deny from 109.237.112.0/20
+	deny from 46.22.224.0/20
+	deny from 130.0.8.0/21
+	deny from 185.55.36.0/22
+	deny from 217.25.16.0/20
+	deny from 109.239.16.0/20
+	deny from 37.26.0.0/18
+	deny from 185.80.172.0/22
+	deny from 217.168.176.0/20
+	deny from 5.191.0.0/16
+	deny from 77.244.112.0/20
+	deny from 212.47.128.0/19
+	deny from 62.217.128.0/19
+	deny from 85.158.144.0/21
+	deny from 88.151.192.0/21
+	deny from 109.205.208.0/21
+	deny from 46.23.96.0/20
+	deny from 188.64.8.0/21
+	deny from 164.215.96.0/21
+	deny from 37.128.200.0/21
+	deny from 5.10.240.0/20
+	deny from 5.178.0.0/20
+	deny from 185.81.216.0/22
+	deny from 62.212.224.0/19
+	deny from 85.132.0.0/17
+	deny from 94.20.0.0/16
+	deny from 31.170.224.0/19
+	deny from 31.171.0.0/17
+	deny from 109.235.192.0/21
+	deny from 149.126.112.0/20
+	deny from 134.19.208.0/20
+	deny from 131.117.128.0/20
+	deny from 5.133.224.0/20
+	deny from 37.114.128.0/18
+	deny from 5.250.192.0/19
+	deny from 80.69.48.0/20
+	deny from 91.135.240.0/20
+	deny from 158.181.32.0/20
+	deny from 176.28.80.0/21
+	deny from 5.44.32.0/21
+	deny from 185.52.128.0/22
+	deny from 194.135.152.0/21
+	deny from 194.135.160.0/19
+	deny from 217.64.16.0/20
+	deny from 81.17.80.0/20
+	deny from 213.154.0.0/19
+	deny from 178.76.0.0/18
+	deny from 188.253.128.0/17
+	deny from 37.61.0.0/17
+	deny from 185.30.88.0/22
+	deny from 185.43.188.0/22
+	deny from 78.109.48.0/21
+	deny from 185.18.244.0/22
+	deny from 185.12.16.0/22
+	deny from 109.205.160.0/21
+	deny from 46.32.160.0/19
+	deny from 185.26.184.0/22
+	deny from 217.14.96.0/20
+	deny from 185.32.44.0/22
+	deny from 149.255.144.0/20
+	deny from 5.197.0.0/16
+	deny from 37.72.128.0/20
+	deny from 185.34.100.0/22
+	deny from 185.40.176.0/22
+	deny from 188.72.128.0/18
+	deny from 185.47.4.0/22
+	deny from 82.194.0.0/19
+	deny from 178.237.64.0/20
+	deny from 185.81.84.0/22
+	deny from 37.32.64.0/20
+	deny from 92.39.80.0/20
+	deny from 95.86.128.0/18
+	deny from 78.111.48.0/20
+	deny from 185.81.80.0/22
+	deny from 89.147.192.0/18
+	deny from 185.34.72.0/22
+	deny from 188.227.208.0/20
+	deny from 5.134.48.0/20
+	deny from 185.40.156.0/22
+	deny from 93.88.80.0/20
+	deny from 185.36.200.0/22
+	deny from 81.21.80.0/20
+	deny from 93.184.224.0/20
+	deny from 46.18.64.0/21
+	deny from 46.228.176.0/20
+	deny from 185.41.200.0/22
+</Limit>
+# END Blocked IP
+
+# BEGIN W3TC Browser Cache
+<IfModule mod_deflate.c>
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+# END W3TC Browser Cache
+# BEGIN W3TC Page Cache core
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTP:Accept-Encoding} gzip
+    RewriteRule .* - [E=W3TC_ENC:_gzip]
+    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
+    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
+    RewriteCond %{REQUEST_METHOD} !=POST
+    RewriteCond %{QUERY_STRING} =""
+    RewriteCond %{REQUEST_URI} \/$
+    RewriteCond %{HTTP_COOKIE} !(comment_author|wp-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
+    RewriteCond "%{DOCUMENT_ROOT}/news/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
+    RewriteRule .* "/news/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
+</IfModule>
+# END W3TC Page Cache core
+
+

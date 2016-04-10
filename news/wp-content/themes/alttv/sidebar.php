@@ -1,17 +1,24 @@
 <div id="sidebar">
 	<div class="widget">
-		<h2>ԱՐԽԻՎ</h2>
-		<?php include('daterange_search.php'); ?>
+		<h2><i class="fa fa-book title-icon"></i> ԲԱՌԱՐԱՆ</h2>
+		<?php include('incl/dictionary.php'); ?>
 	</div>
+
+    <div class="widget">
+        <h2><i class="fa fa-balance-scale title-icon"></i> UNDER CONST.</h2>
+        <?php include('incl/reliable_information.php'); ?>
+    </div>
+
 	<div class="widget">
-		<?php include('rss_reader.php'); ?>
+		<h2><i class="fa fa-calendar title-icon"></i> ԱՐԽԻՎ</h2>
+		<?php include('incl/daterange_search.php'); ?>
 	</div>
+
 	<div class="widget">
-		<div class="fb-like-box" data-href="https://www.facebook.com/alttv.am" data-width="300" data-height="240" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+		<h2 class="dw-logo">DW НОВОСТИ</h2>
+		<?php include('incl/rss_reader.php'); ?>
 	</div>
-	<div class="widget">
-		<div class="g-page" data-href="//plus.google.com/u/0/104734310901064760212" data-layout="landscape" data-rel="publisher"></div>
-	</div>
+
 	<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')): endif; ?>
     <?php
     if (is_single() || is_home() || is_page() || is_category()) {

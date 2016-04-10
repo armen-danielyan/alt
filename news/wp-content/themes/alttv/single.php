@@ -35,8 +35,8 @@
                         </a>
                     <?php } ?>
                     <div id="text-size">
-                        <span id="text-size-inc"><i class="fa fa-plus"></i></span>
-                        <span id="text-size-dec"><i class="fa fa-minus"></i></span>
+                        <span id="text-size-inc"><i class="fa fa-search-plus"></i></span>
+                        <span id="text-size-dec"><i class="fa fa-search-minus"></i></span>
                     </div>
                     <?php the_content(); ?>
                     <div class="viewscount">
@@ -48,7 +48,7 @@
                 <div class="cleaner"></div>
 
                 <div id="post-comment">
-                    <?php comments_template(); ?>
+                    <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5"></div>
                 </div>
 
                 <div class="cleaner"></div>
