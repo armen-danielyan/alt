@@ -19,12 +19,10 @@
 		<div id="featured" >
 			<ul class="ui-tabs-nav">
 				<?php $m = 1;
-				foreach ($posts as $p) { ?>
+				foreach($posts as $p) { ?>
 					<li class="ui-tabs-nav-item" id="nav-fragment-<?php echo $m; ?>" <?php if ($m == 4) echo 'style="margin-bottom: 0"'; ?>>
-						<a href="#fragment-<?php echo $m; $m++; ?>">
-							<?php if (function_exists('has_post_thumbnail') && has_post_thumbnail()) {
-								echo get_the_post_thumbnail($p->ID, 'thumbnail');
-							} ?>
+						<a href="#fragment-<?php echo $m++; ?>">
+							<?php echo get_the_post_thumbnail($p->ID, 'thumbnail'); ?>
 							<span><?php echo $p->post_title; ?></span>
 						</a>
 					</li>
@@ -32,10 +30,8 @@
 			</ul>
 			<?php $n = 1;
 			foreach ($posts as $p) { ?>
-				<div id="fragment-<?php echo $n; $n++; ?>" class="ui-tabs-panel" style="">
-					<?php if (function_exists('has_post_thumbnail') && has_post_thumbnail()) {
-						echo get_the_post_thumbnail($p->ID, 'post-thumb');
-					} ?>
+				<div id="fragment-<?php echo $n++; ?>" class="ui-tabs-panel" style="">
+					<?php echo get_the_post_thumbnail($p->ID, 'post-thumb'); ?>
 					<div class="info" >
 						<h3><a href="<?php echo get_permalink($p->ID); ?>" ><?php echo $p->post_title; ?></a></h3>
 						<h4><?php echo $p->post_excerpt; ?></h4>

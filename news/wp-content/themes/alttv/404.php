@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php include('sidebar_left.php'); ?>
+<?php include('incl/sidebar_left.php'); ?>
 <div id="content">
 	<h4><?php echo 'Ոչինչ չի գտնվել' ?></h4>
 </div>

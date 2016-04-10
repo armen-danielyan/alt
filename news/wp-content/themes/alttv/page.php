@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php include('sidebar_left.php'); ?>
+<?php include('incl/sidebar_left.php'); ?>
 <div id="content">
 	<?php wp_reset_query();
 	if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -8,7 +8,7 @@
 		</div>
 		<div id="post">
 			<div id="post-social">
-				<?php include('social.php'); ?>
+				<?php include('incl/social.php'); ?>
 			</div>
 			<div id="post-body">
 				<?php the_content(); ?>

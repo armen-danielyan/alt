@@ -6,9 +6,9 @@
 		<ul class="boxscroll">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<li><a href="<?php echo get_permalink(); ?>">
-					<?php /*if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
+					<?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
 						the_post_thumbnail('thumbnail');
-					} */?>
+					} ?>
 					<span><?php the_time('j'); echo ' ' . arm_month(get_the_time('n'), long); ?></span><?php the_title(); ?>
 				</a></li>
 			<?php endwhile; endif;

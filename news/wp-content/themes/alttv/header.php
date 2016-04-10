@@ -232,10 +232,10 @@ $sape = new SAPE_client();
                     } ?></h4>
             </div>
             <div id="header-col3" class="header-cols">
-                <?php include('weather.php'); ?>
+                <?php include('incl/weather.php'); ?>
             </div>
             <div id="header-col4" class="header-cols">
-                <?php include('currency.php'); ?>
+                <?php include('incl/currency.php'); ?>
             </div>
             <div id="header-col6" class="header-cols">
                 <a href="https://play.google.com/store/apps/details?id=am.alttv.alttv&hl=enhttps://play.google.com/store/apps/details?id=am.alttv.alttv&hl=en" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/google-play.png" width="160" height="52" alt=""></a>
@@ -258,9 +258,9 @@ $sape = new SAPE_client();
                     <div class="sep"></div>
                     <?php wp_nav_menu(array('container' => false, 'theme_location' => 'main-menu')); ?>
                     <div class="sep"></div>
-                    <?php include('weather_small.php'); ?>
+                    <?php include('incl/weather_small.php'); ?>
                     <div class="sep"></div>
-                    <?php include('currency_small.php'); ?>
+                    <?php include('incl/currency_small.php'); ?>
                 </div>
             </div>
             <?php get_search_form(); ?>

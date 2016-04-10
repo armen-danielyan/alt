@@ -36,20 +36,20 @@
                 $yt_vid_json = file_get_contents($yt_vid_url);
                 $yt_vid_data = json_decode($yt_vid_json, TRUE);
                 $yt_vid_dur = $yt_vid_data["items"][0]["contentDetails"]["duration"];															
-								preg_match_all('/(\d+)/', $yt_vid_dur, $parts);
-								$yt_h = floor($parts[0][0]/60);
-								$yt_m = $parts[0][0]%60;
-								$yt_s = $parts[0][1];								
-								$dur = "";
-								if ($yt_h != 0) $dur = $yt_h . ":";
-								if (count($parts[0]) == 1) {
-									$yt_m = 0;
-									$yt_s = $parts[0][0];
-								}
-								if ($yt_m < 10) $yt_m = "0" . $yt_m;								
-								if ($yt_s < 10) $yt_s = "0" . $yt_s;								
-								
-								$dur = $dur . $yt_m . ":" . $yt_s;				
+                preg_match_all('/(\d+)/', $yt_vid_dur, $parts);
+                $yt_h = floor($parts[0][0]/60);
+                $yt_m = $parts[0][0]%60;
+                $yt_s = $parts[0][1];
+                $dur = "";
+                if ($yt_h != 0) $dur = $yt_h . ":";
+                if (count($parts[0]) == 1) {
+                    $yt_m = 0;
+                    $yt_s = $parts[0][0];
+                }
+                if ($yt_m < 10) $yt_m = "0" . $yt_m;
+                if ($yt_s < 10) $yt_s = "0" . $yt_s;
+
+                $dur = $dur . $yt_m . ":" . $yt_s;
                 return $dur;
             }
 

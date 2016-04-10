@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php include('sidebar_left.php'); ?>
+<?php include('incl/sidebar_left.php'); ?>
     <div id="content">
         <div id="archive">
             <?php $t = false;

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php include('sidebar_left.php'); ?>
+<?php include('incl/sidebar_left.php'); ?>
     <div id="content">
         <?php wp_reset_query();
         if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -25,7 +25,7 @@
             </div>
             <div id="post">
                 <div id="post-social">
-                    <?php include('social.php'); ?>
+                    <?php include('incl/social.php'); ?>
                 </div>
                 <div id="post-body">
                     <?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) { ?>
@@ -54,7 +54,7 @@
                 <div class="cleaner"></div>
 
                 <div id="releated-posts">
-                    <?php include('releated_posts.php'); ?>
+                    <?php include('incl/releated_posts.php'); ?>
                 </div>
             </div>
         <?php endwhile; endif;
