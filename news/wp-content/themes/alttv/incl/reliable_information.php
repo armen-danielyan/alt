@@ -21,5 +21,5 @@
         </li>
     <?php endwhile; endif; ?>
     </ul>
-    <div class="reliable-more"><a href="#">Ավելին &raquo;</a></div>
+    <div class="reliable-more"><a href="<?php echo get_post_type_archive_link('reliable-information'); ?>">Ավելին &raquo;</a></div>
 </div>

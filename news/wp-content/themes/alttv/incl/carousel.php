@@ -1,8 +1,8 @@
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jcarousel.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/carousel.css" />
 <div id="carousel">
-	<div class="next"></div>
-	<div class="prev"></div>
+	<div class="next"><i class="fa fa-chevron-circle-right"></i></div>
+	<div class="prev"><i class="fa fa-chevron-circle-left"></i></div>
 	<?php $cat_name = 'Առանց մեկնաբանության'; ?>
 	<h2><?php echo $cat_name; ?></h2>           
 	<div class="carousel-items">    	

@@ -223,13 +223,13 @@ $sape = new SAPE_client();
                         height=64/></a>
             </div>
             <div id="header-col2" class="header-cols">
-                <h2><?php echo date('j'); ?></h2>
-                <h4><?php if (function_exists('arm_month')) {
+                <div class="date-day"><?php echo date('j'); ?></div>
+                <div class="date-month"><?php if (function_exists('arm_month')) {
                         echo arm_month(date('n'), 'long');
-                    } ?></h4>
-                <h4><?php if (function_exists('arm_weekday')) {
+                    } ?></div>
+                <div class="date-week"><?php if (function_exists('arm_weekday')) {
                         echo arm_weekday(date('w'));
-                    } ?></h4>
+                    } ?></div>
             </div>
             <div id="header-col3" class="header-cols">
                 <?php include('incl/weather.php'); ?>

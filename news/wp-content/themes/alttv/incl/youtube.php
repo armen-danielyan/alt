@@ -1,6 +1,6 @@
 <div id="yt-channel">
     <div id="yt-title">
-        <a target="_blank" href="http://www.youtube.com/user/alttvam" style="float:left"><h2><i class="fa fa-youtube-square title-icon"></i> ՏԵՍԱՆՅՈՒԹԵՐ</h2></a>
+        <a target="_blank" href="http://www.youtube.com/user/alttvam" style="float:left"><h2><i class="fa fa-youtube-play title-icon"></i> ՏԵՍԱՆՅՈՒԹԵՐ</h2></a>
         <div id="yt-subscribe"><div class="g-ytsubscribe" data-channel="alttvam" data-layout="default" data-count="default"></div></div>
     </div>
     <div class="cleaner"></div>

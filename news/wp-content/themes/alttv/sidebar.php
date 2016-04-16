@@ -5,7 +5,7 @@
 	</div>
 
     <div class="widget">
-        <h2><i class="fa fa-balance-scale title-icon"></i> UNDER CONST.</h2>
+        <h2><i class="fa fa-balance-scale title-icon"></i> ԻՆՖՈՐՄԱՑԻԱՅԻ ՍՏՈՒԳՈՒՄ</h2>
         <?php include('incl/reliable_information.php'); ?>
     </div>
 

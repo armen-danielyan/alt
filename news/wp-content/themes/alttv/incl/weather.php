@@ -16,5 +16,5 @@
     $w_img = $cond_results[1];
 
     echo $w_img;
-    echo "<h4>" . "Արմավիր " . $w_curr . "&#176" . "</h4>";
+    echo '<div class="weather-info">Արմավիր ' . $w_curr . '&#176</div>';
 ?>

@@ -1,4 +1,18 @@
-		</div>
+            <div class="cleaner lineclear"></div>
+            <div id="banner">
+                <div class="bannerLeft">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/banner1.jpg"/>
+                </div>
+                <div class="bannerRight">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/banner2.jpg"/>
+                </div>
+                <div class="bannerText">Այս կայքը գործում է «Մեդիան քաղաքացիների տեղեկացված մասնակցության համար» ծրագրի
+                    շրջանակում, որը հնարավոր է դարձել Ամերիկայի ժողովրդի աջակցությամբ ԱՄՆ Միջազգային զարգացման գործակալության
+                    (ԱՄՆ ՄԶԳ) միջոցով: Կայքի բովանդակության համար պատասխանատվությունը միմիայն հեղինակներինն է և պարտադիր չէ, որ
+                    արտահայտի ԱՄՆ ՄԶԳ կամ ԱՄՆ կառավարության տեսակետները:
+                </div>
+            </div>
+        </div>
 		<div class="cleaner"></div>
 		<div id="footer">
 			<div id="footer-col1">

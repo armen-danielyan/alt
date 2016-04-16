@@ -205,7 +205,7 @@ function Create_Reliable_Information_CPT() {
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
-        'register_meta_box_cb'  => 'AddReliableMetaboxes'
+        'rewrite'               => array( 'slug' => 'ինֆորմացիայի-ստուգում' )
     );
     register_post_type( 'reliable-information', $args );
 }
@@ -249,7 +249,8 @@ function Create_Dictionary_CPT() {
         'has_archive'           => true,
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
-        'capability_type'       => 'page'
+        'capability_type'       => 'page',
+        'rewrite'               => array( 'slug' => 'բառարան' )
     );
     register_post_type( 'dictionary', $args );
 }
